@@ -278,3 +278,19 @@ ec2-user:~/environment $ ruby -v
 ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
 ec2-user:~/environment $
 ```
+
+## railsサーバー起動 & アクセス
+
+```Console
+ec2-user:~/environment $ cd first_app/
+ec2-user:~/environment/first_app (master) $ rails s
+=> Booting Puma
+=> Rails 5.2.0 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.11.4 (ruby 2.4.1-p111), codename: Love Song
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://localhost:8080
+Use Ctrl-C to stop
+```
