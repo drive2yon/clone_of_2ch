@@ -1,4 +1,10 @@
-# README
+# README 
+当該ソースコードは以下URLの学習のために作成したものである。
+
+はじめてのRailsアプリ 2chの簡易クローンアプリを作る
+https://cyllabus.jp/courses/r9NBvH810khxpaN4PmQPTQ
+
+## README(Cloud9で rails new した時に生成された部分)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
