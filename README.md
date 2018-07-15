@@ -284,6 +284,7 @@ ec2-user:~/environment $ ruby -v
 ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
 ec2-user:~/environment $
 ```
+https://github.com/drive2yon/clone_of_2ch/commit/496bef8e4786ccd981efa42941f1083f01b1b9fb
 
 ## railsサーバー起動 & アクセス
 
@@ -299,4 +300,35 @@ Puma starting in single mode...
 * Environment: development
 * Listening on tcp://localhost:8080
 Use Ctrl-C to stop
+```
+## スレッド一覧画面（Boards#index）を作成する
+https://github.com/drive2yon/clone_of_2ch/commit/9aa25d378f6ebfdc3d3b68d14f8ed23d098dfe97
+
+## スレッド作成画面（Boards#new）を作成する
+https://github.com/drive2yon/clone_of_2ch/commit/a7357604f203a2dafa1dc61ce66b006f3b448fb0
+
+## スレッド新規作成フォーム（Boards#create）
+```Console
+ec2-user:~/environment/first_app (master) $ rails generate model board title:string editor:string                                
+Running via Spring preloader in process 3857
+      invoke  active_record
+      create    db/migrate/20180715071501_create_boards.rb
+      create    app/models/board.rb
+      invoke    test_unit
+      create      test/models/board_test.rb
+      create      test/fixtures/boards.yml
+ec2-user:~/environment/first_app (master) $ rake db:migrate
+== 20180715071501 CreateBoards: migrating =====================================
+-- create_table(:boards)
+   -> 0.0019s
+== 20180715071501 CreateBoards: migrated (0.0031s) ============================
+```
+
+```Console
+ec2-user:~/environment/first_app (master) $ rails console
+Running via Spring preloader in process 5108
+Loading development environment (Rails 5.2.0)
+2.4.1 :001 > Board.all
+  Board Load (0.4ms)  SELECT  "boards".* FROM "boards" LIMIT ?  [["LIMIT", 11]]
+ => #<ActiveRecord::Relation [#<Board id: 1, title: "テストについて", editor: "drive2yon", created_at: "2018-07-15 07:43:23", updated_at: "2018-07-15 07:43:23">]> 
 ```
