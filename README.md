@@ -332,3 +332,6 @@ Loading development environment (Rails 5.2.0)
   Board Load (0.4ms)  SELECT  "boards".* FROM "boards" LIMIT ?  [["LIMIT", 11]]
  => #<ActiveRecord::Relation [#<Board id: 1, title: "テストについて", editor: "drive2yon", created_at: "2018-07-15 07:43:23", updated_at: "2018-07-15 07:43:23">]> 
 ```
+
+## スレッドの個別ページ作成（Boards#show）
+https://github.com/drive2yon/clone_of_2ch/commit/2d6fd04e1cb6916f5e6edc9dfcbbca5c7248da69

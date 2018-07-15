@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   get 'boards/new' => 'boards#new'
   post 'boards' => 'boards#create'
   get 'boards/:id' => 'boards#show'
+  get 'boards/:id/edit' => 'boards#edit'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -17,6 +17,10 @@ class BoardsController < ApplicationController
     redirect_to "/boards"
   end
   
+  def edit
+    @board = Board.find(params[:id])
+  end
+  
   private
   
   def params_board
