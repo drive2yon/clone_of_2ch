@@ -340,3 +340,6 @@ https://github.com/drive2yon/clone_of_2ch/commit/2d6fd04e1cb6916f5e6edc9dfcbbca5
 https://github.com/drive2yon/clone_of_2ch/commit/85a0fe98bfa981fd708d8d7ec71eb8b9af884db0
 
 ## スレッド名を編集できるようにする（Boards#update）
+https://github.com/drive2yon/clone_of_2ch/commit/69b2cab3433b4202b69f1b4e72340af7d6d6a97f
+
+## スレッドを削除できるようにする（Boards#destroy）
