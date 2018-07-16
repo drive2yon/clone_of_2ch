@@ -343,3 +343,6 @@ https://github.com/drive2yon/clone_of_2ch/commit/85a0fe98bfa981fd708d8d7ec71eb8b
 https://github.com/drive2yon/clone_of_2ch/commit/69b2cab3433b4202b69f1b4e72340af7d6d6a97f
 
 ## スレッドを削除できるようにする（Boards#destroy）
+https://github.com/drive2yon/clone_of_2ch/commit/4163ca89d59deae8e95ff22473f8331a651f40a1
+
+## resourcesを使って書き換える, View書き換える（helperを使う）
