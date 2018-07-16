@@ -301,13 +301,16 @@ Puma starting in single mode...
 * Listening on tcp://localhost:8080
 Use Ctrl-C to stop
 ```
-## スレッド一覧画面（Boards#index）を作成する
+
+## 4	2chの簡易クローンを開発する（掲示板）
+
+### スレッド一覧画面（Boards#index）を作成する
 https://github.com/drive2yon/clone_of_2ch/commit/9aa25d378f6ebfdc3d3b68d14f8ed23d098dfe97
 
-## スレッド作成画面（Boards#new）を作成する
+### スレッド作成画面（Boards#new）を作成する
 https://github.com/drive2yon/clone_of_2ch/commit/a7357604f203a2dafa1dc61ce66b006f3b448fb0
 
-## スレッド新規作成フォーム（Boards#create）
+### スレッド新規作成フォーム（Boards#create）
 ```Console
 ec2-user:~/environment/first_app (master) $ rails generate model board title:string editor:string                                
 Running via Spring preloader in process 3857
@@ -333,25 +336,122 @@ Loading development environment (Rails 5.2.0)
  => #<ActiveRecord::Relation [#<Board id: 1, title: "テストについて", editor: "drive2yon", created_at: "2018-07-15 07:43:23", updated_at: "2018-07-15 07:43:23">]> 
 ```
 
-## スレッドの個別ページ作成（Boards#show）
+### スレッドの個別ページ作成（Boards#show）
 https://github.com/drive2yon/clone_of_2ch/commit/2d6fd04e1cb6916f5e6edc9dfcbbca5c7248da69
 
-## スレッド編集画面を作成（Boards#edit)
+### スレッド編集画面を作成（Boards#edit)
 https://github.com/drive2yon/clone_of_2ch/commit/85a0fe98bfa981fd708d8d7ec71eb8b9af884db0
 
-## スレッド名を編集できるようにする（Boards#update）
+### スレッド名を編集できるようにする（Boards#update）
 https://github.com/drive2yon/clone_of_2ch/commit/69b2cab3433b4202b69f1b4e72340af7d6d6a97f
 
-## スレッドを削除できるようにする（Boards#destroy）
+### スレッドを削除できるようにする（Boards#destroy）
 https://github.com/drive2yon/clone_of_2ch/commit/4163ca89d59deae8e95ff22473f8331a651f40a1
 
-## resourcesを使って書き換える, View書き換える（helperを使う）
+## 5	RESTfulにコードを書き直す
+
+### resourcesを使って書き換える, View書き換える（helperを使う）
 https://github.com/drive2yon/clone_of_2ch/commit/fb2c904b71d2c47995116cee19aa089442ef9534
 
-## Controllerを書き換える（helperを使って）
+### Controllerを書き換える（helperを使って）
 https://github.com/drive2yon/clone_of_2ch/commit/07d9644e7ff1c85c70be921f305a7a95fbb817a2
 
-## form_forメソッドでformタグを作成する
+### form_forメソッドでformタグを作成する
 https://github.com/drive2yon/clone_of_2ch/commit/5983729d4b731c464b0f660ca73b328b00243b07
 
-## raiseを削除して、実行する, params_bordメソッドを変形して、form_forタグに対応する
+### raiseを削除して、実行する, params_bordメソッドを変形して、form_forタグに対応する
+https://github.com/drive2yon/clone_of_2ch/commit/1ab73316e370634ed877a98977a84f06fb6751c9
+
+## 6	Viewを整える①（スタイルを書く）
+
+### Normalize.cssとbundle install, normalize.cssを読み込む
+
+```Console
+ec2-user:~/environment/first_app (master) $ bundle install
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+Fetching gem metadata from https://rubygems.org/.........
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 12.3.1
+Using concurrent-ruby 1.0.5
+Using i18n 1.0.1
+Using minitest 5.11.3
+Using thread_safe 0.3.6
+Using tzinfo 1.2.5
+Using activesupport 5.2.0
+Using builder 3.2.3
+Using erubi 1.7.1
+Using mini_portile2 2.3.0
+Using nokogiri 1.8.4
+Using rails-dom-testing 2.0.3
+Using crass 1.0.4
+Using loofah 2.2.2
+Using rails-html-sanitizer 1.0.4
+Using actionview 5.2.0
+Using rack 2.0.5
+Using rack-test 1.0.0
+Using actionpack 5.2.0
+Using nio4r 2.3.1
+Using websocket-extensions 0.1.3
+Using websocket-driver 0.7.0
+Using actioncable 5.2.0
+Using globalid 0.4.1
+Using activejob 5.2.0
+Using mini_mime 1.0.0
+Using mail 2.7.0
+Using actionmailer 5.2.0
+Using activemodel 5.2.0
+Using arel 9.0.0
+Using activerecord 5.2.0
+Using mimemagic 0.3.2
+Using marcel 0.3.2
+Using activestorage 5.2.0
+Using public_suffix 3.0.2
+Using addressable 2.5.2
+Using io-like 0.3.0
+Using archive-zip 0.11.0
+Using bindex 0.5.0
+Using msgpack 1.2.4
+Using bootsnap 1.3.0
+Using bundler 1.16.2
+Using byebug 10.0.2
+Using xpath 3.1.0
+Using capybara 3.3.1
+Using ffi 1.9.25
+Using childprocess 0.9.0
+Using chromedriver-helper 1.2.0
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using coffee-script 2.4.1
+Using method_source 0.9.0
+Using thor 0.20.0
+Using railties 5.2.0
+Using coffee-rails 4.2.2
+Using multi_json 1.13.1
+Using jbuilder 2.7.0
+Using rb-fsevent 0.10.3
+Using rb-inotify 0.9.10
+Using ruby_dep 1.5.0
+Using listen 3.1.5
+Fetching normalize-rails 4.1.1
+Installing normalize-rails 4.1.1
+Using puma 3.11.4
+Using sprockets 3.7.2
+Using sprockets-rails 3.2.1
+Using rails 5.2.0
+Using rubyzip 1.2.1
+Using sass-listen 4.0.0
+Using sass 3.5.6
+Using tilt 2.0.8
+Using sass-rails 5.0.7
+Using selenium-webdriver 3.13.0
+Using spring 2.0.2
+Using spring-watcher-listen 2.0.1
+Using sqlite3 1.3.13
+Using turbolinks-source 5.1.0
+Using turbolinks 5.1.1
+Using uglifier 4.1.14
+Using web-console 3.6.2
+Bundle complete! 19 Gemfile dependencies, 79 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+```
