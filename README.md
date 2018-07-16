@@ -366,6 +366,8 @@ https://github.com/drive2yon/clone_of_2ch/commit/1ab73316e370634ed877a98977a84f0
 
 ### Normalize.cssとbundle install, normalize.cssを読み込む
 
+https://github.com/drive2yon/clone_of_2ch/commit/38fe92c9e037bc59a43a0b34ef3b079a1988d6ae
+
 ```Console
 ec2-user:~/environment/first_app (master) $ bundle install
 The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
@@ -454,4 +456,25 @@ Using uglifier 4.1.14
 Using web-console 3.6.2
 Bundle complete! 19 Gemfile dependencies, 79 gems now installed.
 Use `bundle info [gemname]` to see where a bundled gem is installed.
+```
+
+### 背景画像を読み込む
+
+```Console
+ec2-user:~/environment/first_app (master) $ wget http://www2.2ch.net/ba.gif -P app/assets/images
+--2018-07-16 20:57:25--  http://www2.2ch.net/ba.gif
+Resolving www2.2ch.net (www2.2ch.net)... 104.20.50.205, 104.20.49.205
+Connecting to www2.2ch.net (www2.2ch.net)|104.20.50.205|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://www2.5ch.net/ba.gif [following]
+--2018-07-16 20:57:25--  https://www2.5ch.net/ba.gif
+Resolving www2.5ch.net (www2.5ch.net)... 104.20.26.96, 104.20.27.96
+Connecting to www2.5ch.net (www2.5ch.net)|104.20.26.96|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 856 [image/gif]
+Saving to: ‘app/assets/images/ba.gif’
+
+ba.gif                           100%[=======================================================>]     856  --.-KB/s    in 0s      
+
+2018-07-16 20:57:25 (16.9 MB/s) - ‘app/assets/images/ba.gif’ saved [856/856]
 ```
