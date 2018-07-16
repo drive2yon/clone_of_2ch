@@ -335,3 +335,8 @@ Loading development environment (Rails 5.2.0)
 
 ## スレッドの個別ページ作成（Boards#show）
 https://github.com/drive2yon/clone_of_2ch/commit/2d6fd04e1cb6916f5e6edc9dfcbbca5c7248da69
+
+## スレッド編集画面を作成（Boards#edit)
+https://github.com/drive2yon/clone_of_2ch/commit/85a0fe98bfa981fd708d8d7ec71eb8b9af884db0
+
+## スレッド名を編集できるようにする（Boards#update）

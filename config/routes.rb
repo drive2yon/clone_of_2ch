@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   post 'boards' => 'boards#create'
   get 'boards/:id' => 'boards#show'
   get 'boards/:id/edit' => 'boards#edit'
+  put 'boards/:id' => 'boards#update'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
