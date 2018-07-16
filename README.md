@@ -346,3 +346,6 @@ https://github.com/drive2yon/clone_of_2ch/commit/69b2cab3433b4202b69f1b4e72340af
 https://github.com/drive2yon/clone_of_2ch/commit/4163ca89d59deae8e95ff22473f8331a651f40a1
 
 ## resourcesを使って書き換える, View書き換える（helperを使う）
+https://github.com/drive2yon/clone_of_2ch/commit/fb2c904b71d2c47995116cee19aa089442ef9534
+
+## Controllerを書き換える（helperを使って）
