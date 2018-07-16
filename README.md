@@ -349,3 +349,9 @@ https://github.com/drive2yon/clone_of_2ch/commit/4163ca89d59deae8e95ff22473f8331
 https://github.com/drive2yon/clone_of_2ch/commit/fb2c904b71d2c47995116cee19aa089442ef9534
 
 ## Controllerを書き換える（helperを使って）
+https://github.com/drive2yon/clone_of_2ch/commit/07d9644e7ff1c85c70be921f305a7a95fbb817a2
+
+## form_forメソッドでformタグを作成する
+https://github.com/drive2yon/clone_of_2ch/commit/5983729d4b731c464b0f660ca73b328b00243b07
+
+## raiseを削除して、実行する, params_bordメソッドを変形して、form_forタグに対応する
