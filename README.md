@@ -460,6 +460,8 @@ Use `bundle info [gemname]` to see where a bundled gem is installed.
 
 ### 背景画像を読み込む
 
+https://github.com/drive2yon/clone_of_2ch/commit/62f10a65c15ecbd373a58cdc3d0798711434efa8
+
 ```Console
 ec2-user:~/environment/first_app (master) $ wget http://www2.2ch.net/ba.gif -P app/assets/images
 --2018-07-16 20:57:25--  http://www2.2ch.net/ba.gif
@@ -478,3 +480,6 @@ ba.gif                           100%[==========================================
 
 2018-07-16 20:57:25 (16.9 MB/s) - ‘app/assets/images/ba.gif’ saved [856/856]
 ```
+
+## sassを書く準備をする, テンプレートの調整
+
