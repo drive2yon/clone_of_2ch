@@ -13,8 +13,11 @@ class BoardsController < ApplicationController
   
   def create
     @board = Board.new(params_board)
-    @board.save
-    redirect_to board_url(@board)
+    if @board.save
+      redirect_to board_url(@board)
+    else
+      render "new"
+    end
   end
   
   def edit
