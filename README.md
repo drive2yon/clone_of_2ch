@@ -481,13 +481,33 @@ ba.gif                           100%[==========================================
 2018-07-16 20:57:25 (16.9 MB/s) - ‘app/assets/images/ba.gif’ saved [856/856]
 ```
 
-## sassを書く準備をする, テンプレートの調整
+### sassを書く準備をする, テンプレートの調整
 https://github.com/drive2yon/clone_of_2ch/commit/eda85442d54f512667cfd48c946b338eb3755da7
 
-## スレッド作成失敗時の挙動を実装
+### スレッド作成失敗時の挙動を実装
 https://github.com/drive2yon/clone_of_2ch/commit/600f6442394bd34895e3e47aa527582527e8fc1a
 
-## スレッド編集失敗時の挙動を実装
+### スレッド編集失敗時の挙動を実装
 https://github.com/drive2yon/clone_of_2ch/commit/600f6442394bd34895e3e47aa527582527e8fc1a
 
-## Boards#showの見た目を整える
+### Boards#showの見た目を整える
+https://github.com/drive2yon/clone_of_2ch/commit/67b8efe84456648fceba29730d38d53cd1f77dac
+
+## 7	レス機能（コメント機能）を実装する
+
+### レス作成フォームを作る
+```Console
+ec2-user:~/environment/first_app (master) $ rails generate model comment board_id:integer name:string content:text
+Running via Spring preloader in process 4518
+      invoke  active_record
+      create    db/migrate/20180718211254_create_comments.rb
+      create    app/models/comment.rb
+      invoke    test_unit
+      create      test/models/comment_test.rb
+      create      test/fixtures/comments.yml
+ec2-user:~/environment/first_app (master) $ rake db:migrate
+== 20180718211254 CreateComments: migrating ===================================
+-- create_table(:comments)
+   -> 0.0032s
+== 20180718211254 CreateComments: migrated (0.0040s) ==========================
+```
