@@ -511,3 +511,7 @@ ec2-user:~/environment/first_app (master) $ rake db:migrate
    -> 0.0032s
 == 20180718211254 CreateComments: migrated (0.0040s) ==========================
 ```
+https://github.com/drive2yon/clone_of_2ch/commit/cac6493f318c5789e18c9e570f33332d1229fd34
+
+### Routingを定義する
+
