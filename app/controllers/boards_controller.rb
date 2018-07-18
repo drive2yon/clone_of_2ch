@@ -5,6 +5,7 @@ class BoardsController < ApplicationController
   
   def show
     @board = Board.find(params[:id])
+    @Comment = Comment.new
   end
   
   def new

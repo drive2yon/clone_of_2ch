@@ -514,4 +514,8 @@ ec2-user:~/environment/first_app (master) $ rake db:migrate
 https://github.com/drive2yon/clone_of_2ch/commit/cac6493f318c5789e18c9e570f33332d1229fd34
 
 ### Routingを定義する
+https://github.com/drive2yon/clone_of_2ch/commit/4a82c55bd61d2ca84eb94a75ed7394e43fa9c1ce
+
+### Controllerを作成する
+
 
