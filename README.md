@@ -488,4 +488,6 @@ https://github.com/drive2yon/clone_of_2ch/commit/eda85442d54f512667cfd48c946b338
 https://github.com/drive2yon/clone_of_2ch/commit/600f6442394bd34895e3e47aa527582527e8fc1a
 
 ## スレッド編集失敗時の挙動を実装
+https://github.com/drive2yon/clone_of_2ch/commit/600f6442394bd34895e3e47aa527582527e8fc1a
 
+## Boards#showの見た目を整える
