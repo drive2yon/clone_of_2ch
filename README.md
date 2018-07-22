@@ -517,5 +517,7 @@ https://github.com/drive2yon/clone_of_2ch/commit/cac6493f318c5789e18c9e570f33332
 https://github.com/drive2yon/clone_of_2ch/commit/4a82c55bd61d2ca84eb94a75ed7394e43fa9c1ce
 
 ### Controllerを作成する
+https://github.com/drive2yon/clone_of_2ch/commit/391f57e9cc8edc7bf14e5d936f4213ab5afceb4f
 
+### Modelを定義する
 
