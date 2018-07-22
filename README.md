@@ -523,7 +523,7 @@ https://github.com/drive2yon/clone_of_2ch/commit/391f57e9cc8edc7bf14e5d936f4213a
 https://github.com/drive2yon/clone_of_2ch/commit/a6f8baf8a6e92af27246d0826b13ac187874f96b
 
 ### Viewを書く
-
+https://github.com/drive2yon/clone_of_2ch/commit/28dbd8ecccbd14efa3e6f1b0273ff0184ea3b958
 ```Console
 ec2-user:~/environment/first_app (master) $ rails console
 Running via Spring preloader in process 5310
@@ -532,3 +532,5 @@ Loading development environment (Rails 5.2.0)
   Comment Load (0.4ms)  SELECT  "comments".* FROM "comments" LIMIT ?  [["LIMIT", 11]]
  => #<ActiveRecord::Relation [#<Comment id: 1, board_id: 10, name: "drive2", content: "見たぜ", created_at: "2018-07-22 05:09:56", updated_at: "2018-07-22 05:09:56">]> 
 ```
+### レス（コメント）を表示する
+
