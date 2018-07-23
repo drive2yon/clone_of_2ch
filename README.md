@@ -541,4 +541,7 @@ https://github.com/drive2yon/clone_of_2ch/commit/c270d795ba46a17afa188140b87e240
 ## Viewを整える(2)（スタイルを書く）
 
 ### 掲示板個別表示の見た目
+https://github.com/drive2yon/clone_of_2ch/commit/68ee6fc5fb1243b8c01f8798bbfbfbae7484df68
+
+### Boards#newの見た目
 
