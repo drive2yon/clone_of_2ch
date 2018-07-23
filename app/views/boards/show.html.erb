@@ -11,7 +11,8 @@
     <div class="comments">
     <% @board.comments.each do |comment| %>
       <%= comment.name %>
-      <%= comment.content %><br>
+      <%= comment.content %>
+      <%= link_to "削除する", board_comment_path(@board, comment), method: :delete, data: { confirm: "本当に削除しますか?" } %> <br>
     <% end %>
     </div>
     <hr>

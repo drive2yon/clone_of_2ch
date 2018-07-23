@@ -533,4 +533,7 @@ Loading development environment (Rails 5.2.0)
  => #<ActiveRecord::Relation [#<Comment id: 1, board_id: 10, name: "drive2", content: "見たぜ", created_at: "2018-07-22 05:09:56", updated_at: "2018-07-22 05:09:56">]> 
 ```
 ### レス（コメント）を表示する
+https://github.com/drive2yon/clone_of_2ch/commit/6853fceee0175d2246093aa1c87b82862d4e2c99
+
+### レス（コメント）の削除機能
 
