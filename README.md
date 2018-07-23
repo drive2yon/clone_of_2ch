@@ -547,5 +547,7 @@ https://github.com/drive2yon/clone_of_2ch/commit/68ee6fc5fb1243b8c01f8798bbfbfba
 https://github.com/drive2yon/clone_of_2ch/commit/eb9c1d632af7b17a92e0839f3769687599ac9864
 
 ### 掲示板編集ページの見た目
+https://github.com/drive2yon/clone_of_2ch/commit/add120b03e670d933275e2a6aa0bdbaec37ee712
 
+### ルートのルーティング定義
 
