@@ -362,7 +362,7 @@ https://github.com/drive2yon/clone_of_2ch/commit/5983729d4b731c464b0f660ca73b328
 ### raiseを削除して、実行する, params_bordメソッドを変形して、form_forタグに対応する
 https://github.com/drive2yon/clone_of_2ch/commit/1ab73316e370634ed877a98977a84f06fb6751c9
 
-## 6	Viewを整える①（スタイルを書く）
+## 6	Viewを整える(1)（スタイルを書く）
 
 ### Normalize.cssとbundle install, normalize.cssを読み込む
 
@@ -536,4 +536,9 @@ Loading development environment (Rails 5.2.0)
 https://github.com/drive2yon/clone_of_2ch/commit/6853fceee0175d2246093aa1c87b82862d4e2c99
 
 ### レス（コメント）の削除機能
+https://github.com/drive2yon/clone_of_2ch/commit/c270d795ba46a17afa188140b87e2409da89b254
+
+## Viewを整える(2)（スタイルを書く）
+
+### 掲示板個別表示の見た目
 
