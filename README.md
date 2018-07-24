@@ -550,4 +550,4 @@ https://github.com/drive2yon/clone_of_2ch/commit/eb9c1d632af7b17a92e0839f3769687
 https://github.com/drive2yon/clone_of_2ch/commit/add120b03e670d933275e2a6aa0bdbaec37ee712
 
 ### ルートのルーティング定義
-
+https://github.com/drive2yon/clone_of_2ch/commit/d202fc8db0636e6cf9b7a40b28d8661dc170465f
