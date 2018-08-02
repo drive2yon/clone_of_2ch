@@ -300,3 +300,46 @@ Puma starting in single mode...
 * Listening on tcp://localhost:8080
 Use Ctrl-C to stop
 ```
+
+## コードジェネレーター「scaffold」
+
+### Board関係をscaffoldする
+```Console
+ec2-user:~/environment/first_app (scaffold) $ rails g scaffold board title:string editor:string
+Running via Spring preloader in process 4292
+      invoke  active_record
+      create    db/migrate/20180802214700_create_boards.rb
+      create    app/models/board.rb
+      invoke    test_unit
+      create      test/models/board_test.rb
+      create      test/fixtures/boards.yml
+      invoke  resource_route
+       route    resources :boards
+      invoke  scaffold_controller
+      create    app/controllers/boards_controller.rb
+      invoke    erb
+      create      app/views/boards
+      create      app/views/boards/index.html.erb
+      create      app/views/boards/edit.html.erb
+      create      app/views/boards/show.html.erb
+      create      app/views/boards/new.html.erb
+      create      app/views/boards/_form.html.erb
+      invoke    test_unit
+      create      test/controllers/boards_controller_test.rb
+      create      test/system/boards_test.rb
+      invoke    helper
+      create      app/helpers/boards_helper.rb
+      invoke      test_unit
+      invoke    jbuilder
+      create      app/views/boards/index.json.jbuilder
+      create      app/views/boards/show.json.jbuilder
+      create      app/views/boards/_board.json.jbuilder
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/boards.coffee
+      invoke    scss
+      create      app/assets/stylesheets/boards.scss
+      invoke  scss
+      create    app/assets/stylesheets/scaffolds.scss
+
+```
