@@ -5,3 +5,9 @@
 <%= @board.editor %> |
 <%= link_to 'Edit', edit_board_path(@board) %> |
 <%= link_to 'Back', boards_path %>
+
+<hr>
+
+<h2>新規コメント投稿</h2>
+
+<%= render 'comments/form' %>
