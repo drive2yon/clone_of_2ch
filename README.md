@@ -452,3 +452,5 @@ ec2-user:~/environment/first_app (scaffold) $ rake db:migrate
 ### 掲示板個別表示ページで、新規コメントフォームを設置する
 app/views/comments/_form.html.erb
 チュートリアルではform_forを使ってるがRails5からはform_withになった模様。
+
+### コメント投稿できるようにする
