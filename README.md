@@ -436,7 +436,7 @@ Running via Spring preloader in process 7771
 ### ルーティング(Routing)を定義する
 
 dbをマイグレーションしないとブラウザでルーティング情報表示するとエラーが出た。
-(チュートリアルでは記載無し。またgithubの"second_app"に/db/schema.rbファイルの登録ない)
+(チュートリアルでは記載無し。またgithubの"second_app"に/db/schema.rbファイルの登録ない?)
 ```Console
 ec2-user:~/environment/first_app (scaffold) $ rake db:migrate
 == 20180804005227 CreateComments: migrating ===================================
@@ -444,3 +444,6 @@ ec2-user:~/environment/first_app (scaffold) $ rake db:migrate
    -> 0.0056s
 == 20180804005227 CreateComments: migrated (0.0058s) ==========================
 ```
+
+### モデル(Model)を定義する
+
