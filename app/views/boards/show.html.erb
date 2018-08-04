@@ -1,14 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @board.title %>
-</p>
+<h1><%= @board.title %></h1>
 
-<p>
-  <strong>Editor:</strong>
-  <%= @board.editor %>
-</p>
-
+<%= @board.editor %> |
 <%= link_to 'Edit', edit_board_path(@board) %> |
 <%= link_to 'Back', boards_path %>

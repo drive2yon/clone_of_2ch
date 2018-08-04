@@ -447,3 +447,4 @@ ec2-user:~/environment/first_app (scaffold) $ rake db:migrate
 
 ### モデル(Model)を定義する
 
+### 掲示板個別表示ページの見た目の変更
