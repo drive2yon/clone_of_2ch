@@ -304,6 +304,23 @@ Use Ctrl-C to stop
 ## コードジェネレーター「scaffold」
 
 ### Board関係をscaffoldする
+
+チュートリアルでは"second_app"として新規プロジェクトとして作っている。
+https://github.com/daraf-jp/second_app
+
+ここでは"first_app"の新規生成状態のコミットバージョンから"scaffold"ブランチを作成した。
+/db/development.sqlite3はgitでgitで管理してないため、gitブランチを切り替える前に退避する。
+
+参考)rake db:migrateで他のbranchで作成したschemaをconfig/schema.rbに反映しないようにしたい
+https://teratail.com/questions/62495
+
+参考)サクッと使いこなすためのgit stash Tips & stashの仕組み
+https://qiita.com/ton1517/items/9888a78f6b063e748558
+
+参考)色々な git stash
+https://qiita.com/akasakas/items/768c0b563b96f8a9be9d
+
+
 ```Console
 ec2-user:~/environment/first_app (scaffold) $ rails g scaffold board title:string editor:string
 Running via Spring preloader in process 4292
@@ -345,19 +362,7 @@ Running via Spring preloader in process 4292
 
 ### マイグレーション(migration)する
 
-/db/development.sqlite3はgitでgitで管理してないため、gitブランチを切り替える前に退避する。
-
-参考)rake db:migrateで他のbranchで作成したschemaをconfig/schema.rbに反映しないようにしたい
-https://teratail.com/questions/62495
-
-参考)サクッと使いこなすためのgit stash Tips & stashの仕組み
-https://qiita.com/ton1517/items/9888a78f6b063e748558
-
-参考)色々な git stash
-https://qiita.com/akasakas/items/768c0b563b96f8a9be9d
-
-それからdbを作成する
-
+マイグレーションする前にdbは新規作成する。
 ```Console
 ec2-user:~/environment/first_app (scaffold) $ rake db:create
 Created database 'db/development.sqlite3'
@@ -425,4 +430,17 @@ Running via Spring preloader in process 7771
       create      app/assets/stylesheets/comments.scss
       invoke  scss
    identical    app/assets/stylesheets/scaffolds.scss
+```
+
+
+### ルーティング(Routing)を定義する
+
+dbをマイグレーションしないとブラウザでルーティング情報表示するとエラーが出た。
+(チュートリアルでは記載無し。またgithubの"second_app"に/db/schema.rbファイルの登録ない)
+```Console
+ec2-user:~/environment/first_app (scaffold) $ rake db:migrate
+== 20180804005227 CreateComments: migrating ===================================
+-- create_table(:comments)
+   -> 0.0056s
+== 20180804005227 CreateComments: migrated (0.0058s) ==========================
 ```
