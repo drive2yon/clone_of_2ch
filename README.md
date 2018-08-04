@@ -346,12 +346,17 @@ Running via Spring preloader in process 4292
 ### マイグレーション(migration)する
 
 /db/development.sqlite3はgitでgitで管理してないため、gitブランチを切り替える前に退避する。
+
 参考)rake db:migrateで他のbranchで作成したschemaをconfig/schema.rbに反映しないようにしたい
 https://teratail.com/questions/62495
+
 参考)サクッと使いこなすためのgit stash Tips & stashの仕組み
 https://qiita.com/ton1517/items/9888a78f6b063e748558
+
 参考)色々な git stash
 https://qiita.com/akasakas/items/768c0b563b96f8a9be9d
+
+それからdbを作成する
 
 ```Console
 ec2-user:~/environment/first_app (scaffold) $ rake db:create
@@ -379,4 +384,45 @@ ec2-user:~/environment/first_app (scaffold) $ rake db:migrate
 -- create_table(:boards)
    -> 0.0024s
 == 20180802214700 CreateBoards: migrated (0.0032s) ============================
+```
+
+### Comment関係をscaffoldする
+
+```Cosole
+ec2-user:~/environment/first_app (scaffold) $ rails g scaffold comment board_id:integer name:string content:text
+Running via Spring preloader in process 7771
+      invoke  active_record
+      create    db/migrate/20180804005227_create_comments.rb
+      create    app/models/comment.rb
+      invoke    test_unit
+      create      test/models/comment_test.rb
+      create      test/fixtures/comments.yml
+      invoke  resource_route
+       route    resources :comments
+      invoke  scaffold_controller
+      create    app/controllers/comments_controller.rb
+      invoke    erb
+      create      app/views/comments
+      create      app/views/comments/index.html.erb
+      create      app/views/comments/edit.html.erb
+      create      app/views/comments/show.html.erb
+      create      app/views/comments/new.html.erb
+      create      app/views/comments/_form.html.erb
+      invoke    test_unit
+      create      test/controllers/comments_controller_test.rb
+      create      test/system/comments_test.rb
+      invoke    helper
+      create      app/helpers/comments_helper.rb
+      invoke      test_unit
+      invoke    jbuilder
+      create      app/views/comments/index.json.jbuilder
+      create      app/views/comments/show.json.jbuilder
+      create      app/views/comments/_comment.json.jbuilder
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/comments.coffee
+      invoke    scss
+      create      app/assets/stylesheets/comments.scss
+      invoke  scss
+   identical    app/assets/stylesheets/scaffolds.scss
 ```
