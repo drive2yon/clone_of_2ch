@@ -454,3 +454,5 @@ app/views/comments/_form.html.erb
 チュートリアルではform_forを使ってるがRails5からはform_withになった模様。
 
 ### コメント投稿できるようにする
+
+### コメントを一覧表示する
