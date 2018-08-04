@@ -341,5 +341,42 @@ Running via Spring preloader in process 4292
       create      app/assets/stylesheets/boards.scss
       invoke  scss
       create    app/assets/stylesheets/scaffolds.scss
+```
 
+### マイグレーション(migration)する
+
+/db/development.sqlite3はgitでgitで管理してないため、gitブランチを切り替える前に退避する。
+参考)rake db:migrateで他のbranchで作成したschemaをconfig/schema.rbに反映しないようにしたい
+https://teratail.com/questions/62495
+参考)サクッと使いこなすためのgit stash Tips & stashの仕組み
+https://qiita.com/ton1517/items/9888a78f6b063e748558
+参考)色々な git stash
+https://qiita.com/akasakas/items/768c0b563b96f8a9be9d
+
+```Console
+ec2-user:~/environment/first_app (scaffold) $ rake db:create
+Created database 'db/development.sqlite3'
+Created database 'db/test.sqlite3'
+ec2-user:~/environment/first_app (scaffold) $ git status --ignored
+On branch scaffold
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+Ignored files:
+  (use "git add -f <file>..." to include in what will be committed)
+
+        db/development.sqlite3
+        db/test.sqlite3
+        log/development.log
+        tmp/cache/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ec2-user:~/environment/first_app (scaffold) $ rake db:migrate
+== 20180802214700 CreateBoards: migrating =====================================
+-- create_table(:boards)
+   -> 0.0024s
+== 20180802214700 CreateBoards: migrated (0.0032s) ============================
 ```
